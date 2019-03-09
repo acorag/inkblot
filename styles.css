@@ -1,0 +1,706 @@
+@charset "UTF-8";
+@font-face {
+	font-family: 'Montserrat', sans-serif;
+	src: url('fonts/Montserrat-Regular.ttf')  format('truetype');
+	}
+
+	/*
+	Name: Anthony Coragliotti
+	Date: 2019 FEB 11
+	Assignment: Project V1 - Basic HTML and CSS
+	Purpose: To showcase my internalization of HTML & CSS modules 5 & 6
+	*/
+
+/*	_______________________________________
+		TABLE OF CONTENTS		
+	=======================================
+
+	 RESETS
+	 GLOBAL STRUCTURE
+	   -Containers
+	 BANNER
+	 NAVIGATION MENU
+	  Menu(Global)
+		-Desktops
+		-Laptops
+		-Tablets
+		-Phones
+	 CONTENT (by page)
+		-Page
+		-Containers
+		-Styles
+		-Tables
+*/
+
+/*	_______________________________________
+		RESETS			
+	=======================================
+*/
+	/*  Structure */ html, head, body, footer,
+	/*  Content   */ a, figure, figcaption, img,
+	/*  Nav+Lists */ nav, dl, dt, dd, ol, ul, li,
+	/*  Headers   */ header, h1, h2, h3, h4, h5, h6,
+	/*  TextStyles*/ b, center, em, i, span, strike, strong, u,
+	/*  Tables    */ table, caption, tbody, tfoot, thead, tr, th, td,
+	/*  Containers*/ address, article, aside, blockquote, cite, div, section {
+	  border: 				0;
+	  font: 				inherit;
+	  font-family: 				Montserrat;
+	  font-size: 				100%;
+	  list-style:				none;
+  	  margin: 				0;
+	  padding: 				0;
+	  text-decoration:			none;
+	  vertical-align: 			baseline;
+	}
+
+/*	_______________________________________
+		GLOBAL PAGE STRUCTURE
+	=======================================*/
+
+	header {
+	background-color: 			rgb(230,250,230);
+	width: 					100%;
+	}
+	
+	footer {
+	  background-color: 			rgb(5,90,1);
+	  bottom: 				0;
+	  color: 				white;
+	  font-family:				Montserrat;
+	  font-size:				1.1em;
+	  height: 				25px;
+	  position: 				fixed;
+	  text-align: 				center;
+	  width: 				100%;
+	}
+
+/*	______________________
+	Containers Global
+	======================*/
+
+	.conPeri {
+		background-color: 		rgb(230,250,230);
+		border: 			15px solid rgb(5,90,1);
+		border-top:			0;
+		display: 			flex;
+		align-items: 			center;
+		flex-wrap: 			wrap;
+		justify-content: 		center;
+		margin: 			0;
+	}
+
+	.conOuter {
+		background-color: 		white;
+		margin: 			0 10% 1.5% 10%;
+	}
+
+	.conInner {
+		display: 			block;
+	}
+
+/*	_______________________________________
+		BANNER
+	=======================================*/
+	
+	.conBaner {
+		background-color: 		rgb(230,250,230);
+		width: 				100%;
+	}
+
+	.img-baner {
+		border-radius: 			100px 30px 100px 30px;
+		height: 			auto;
+		width: 				100%;
+	}
+
+
+
+
+
+/*	_______________________________________
+		NAVIGATION MENU				
+	=======================================
+	MENU GLOBAL
+	======================*/
+	
+
+		nav.flexMenu ul {
+			padding: 		1%;
+		}
+
+/*	________________________________
+	   == NAV LARGE LAPTOP/DESKTOPS ==
+	================================
+	VIEWPORT > 1000px WIDE
+	======================*/
+
+	 /* Media query on devices over 1000px */
+	@media screen and (min-width: 1001px) {
+
+	/* MECHANICS */
+
+			/* Hide the menu burger! */
+		a#burger {
+			display: 		none;
+		}
+
+	/* STYLES */
+
+			/* Menu - wrap */
+		nav.flexMenu ul {
+			display: 		flex;
+			flex-flow: 		row wrap;
+		}
+
+			/* Menu List - color, size */
+		nav.flexMenu ul li {			
+			background-color: 	rgb(20,105,20);
+			border-bottom: 		5px solid black;
+			border-radius: 		100px 30px 100px 30px;
+
+/* M5LO6 Demonstrate use of properties of flexbox items
+	(CSS, document what flexbox item properties you use and their impacts)
+	The selector, nav.flexMenu ul li (directlyl above) contains the flexbox
+	items  (directly below) flex-grow, flex-shrink,  and flex-basis, which
+	all collaborate  to automatically grow  and shrink in unison.  Without
+	all three of  these  properties, the menu list would  not  scale  with 
+	the page  and would appear static, instead  of the existing responsive
+	appearance you see when resizing the browser.*/
+
+			flex-grow: 		1;
+			flex-shrink: 		1;
+			flex-basis: 		auto;
+			padding: 		1%;
+		}
+
+			/* Menu Links - color, shape, size, position */
+		nav.flexMenu li a,
+		a:visited {
+			color: 			white;
+			display:		block;
+			font-size:		150%;
+			font-weight: 		bold;
+			text-align: 		center;
+		}
+
+			/* Menu Hover - background to pretty pink!  */
+		nav.flexMenu li:hover {
+			background-color: 	rgb(20,200,10);
+		}
+			/* Menu Hover - text color to gold */
+		nav.flexMenu li a:hover {
+			color: 			rgb(248,213,73);
+		}
+	}
+	
+/*	________________________________
+	   == NAV MOST LAPTOP/DESKTOPS ==
+	================================
+	VIEWPORT < 1000px WIDE
+	======================*/
+
+	 /* Media query on devices under 1000px */
+	@media screen and (max-width: 1000px) {
+
+	/* MECHANICS */
+
+			/* Hide the menu burger! */
+		a#burger {
+			display: 		none;
+		}
+		
+	/* STYLES */
+
+			/* Menu - wrap */
+		nav.flexMenu ul {
+			display: 		flex;
+			flex-flow: 		row wrap;
+		}
+
+			/* Menu List - color, effects, resizing */
+		nav.flexMenu ul li {
+			background-color: 	rgb(20,105,20);
+			border-bottom: 		5px solid black;
+			border-radius: 		100px 30px 100px 30px;
+			flex-grow: 		1;
+			flex-shrink: 		1;
+			flex-basis: 		auto;
+			padding: 		1%;
+		}
+
+			/* Menu Links - color, shape, size, position */
+		nav.flexMenu li a,
+		a:visited {
+			display:		block;
+			color: 			white;
+			font-size:		110%;
+			font-weight: 		bold;
+			text-align: 		center;
+		}
+
+			/* Menu Hover - Background to pretty pink!  */
+		nav.flexMenu li:hover {
+			background-color: 	rgb(20,200,10);
+		}
+
+			/* Link Hover - text color to gold */
+		nav.flexMenu li a:hover {
+			color: 			rgb(248,213,73);
+		}
+
+	}
+	
+/*	________________________________
+		== NAV MOST TABLETS ==
+	================================
+	VIEWPORT < 800px
+	======================*/
+
+	 /* Media query on devices over 800px */
+	@media screen and (max-width: 800px) {
+
+	/* MECHANICS */
+
+			/* Hide the menu burger! */
+		a#burger {
+			display: 		none;
+		}
+
+			/* Menu mechanic for < 800px
+				onHover burger: Display navigation menu.
+				  Within the  HTML, the  anchor(id=burger)
+				comes immediately after  the  nav(navMenu).
+				  This  seemingly  arbitrary  placement  is
+				a deliberate combo and  is VERY  important.
+				  This tag sequence  allows  the use of the 
+				"+" sign  to  combine  two  hover commands;
+				resulting in the ability to move your mouse
+				pointer  off of the icon,  onto  the  menu, 
+				without the menu vanishing  (preserving the 
+				sanity of your website visitors  -  as  you
+				can imagine).
+
+			/* Show menu list when hover over menu burger */
+		a#burger:hover+ul, 
+		nav.flexMenu ul:hover {
+			display: 		block;
+		}
+
+	/* STYLES */
+
+			/* Menu List - position, size */
+		nav.flexMenu ul {
+			display:		flex;
+			
+/*M5LO7 Demonstrate use of properties of flexbox containers
+	(CSS, document what flexbox container properties you use and their impacts)
+	The selector nav.flexMenu ul, (directly above) contains the flexbox container
+	property, (directly below)  flex-direction,  which transforms the navigation
+	menu into a column  when the browser width reduces  to less than 800 pixels.
+	Without the flex-direction: column property,  the menu would be all bunched
+	together when the browser width is reduced to less than 800 pixels.*/
+
+			flex-direction:		column;
+			width: 			70%;
+		}
+
+			/* Menu List - resizing, color, effects */
+		nav.flexMenu ul li {
+			background-color: 	rgb(20,105,20);
+			border-bottom: 		5px solid black;
+			border-radius: 		200px 60px 200px 60px;
+			padding: 		1%;
+		}
+
+			/* Menu Links - color, style, size, position */
+		nav.flexMenu li a,
+		a:visited {
+			color:			white;
+			display:		block;
+			font-size:		150%;
+			font-weight: 		bold;
+			text-align: 		center;
+		}
+
+			/* Menu Hover - Background to pretty pink!  */
+		nav.flexMenu li:hover {
+			background-color: 	rgb(20,200,10);
+		}
+
+			/* Link Hover - Text to a more visible black  */
+		nav.flexMenu li a:hover {
+			color: 			black;
+		}
+
+	}
+
+/*	________________________________
+		== NAV MOST PHONES ==
+	================================
+	VIEWPORT < 480px WIDE
+	======================*/
+
+
+	/* MECHANICS */
+
+/*M5LO3 Use media queries to format a page differently for phones vs. PCs. 
+	(CSS, note where these are in your CSS and describe the overall impact)
+	The media query below, is used to format pages for viewing screens that
+	are less than 480 pixels wide, which is the maximum width for most cell
+	phones. The impact of this media query can be witnessed by reducing the
+	browser  width to  less than  480 pixels wide. The menu  vanishes and a
+	menu "burger" navigation icon appears.  Hovering over this icon makes a
+	smaller version of the menu appear to be used for page navigation.*/
+
+			/* Media query - devices under 480px */
+	@media screen and (max-width: 480px) {
+
+
+
+
+			/* Break out the burger. Yum! */
+		a#burger {
+			display: 		block;
+		}
+
+			/* Hide menu (shhh...) */
+		nav.flexMenu ul {
+			display:		none;
+		}
+
+/*M5LO4 Use CSS for pull down menus (CSS)
+	The a#burger:hover+ul command (below) is preceded in the HTML code
+	by an image of a menu  icon.  This  sequential  combination allows
+	for the use of the  CSS symbol "+" and  causes the navigation menu
+	to  not only  appear  when the icon is  hovered over,  but to also
+	remain in place until the  hovering is ended, or a navigation link
+	is clicked. This magical combination simulates a menu being pulled
+	down from an icon image.*/
+
+			/* Hover(burger) - Show menu */
+		a#burger:hover+ul, nav.flexMenu ul:hover {
+			display: 		block;
+		}
+		
+	/* STYLES */
+		
+			/* Blend menu with background color(light pink) */
+		nav.flexMenu {
+			background-color: 	rgb(230,250,230);
+		}
+
+			/* Menu List - color, effects */
+		nav.flexMenu ul li {
+			border-bottom: 		5px solid black;
+			background-color: 	rgb(20,105,20);
+			border-radius: 		200px 60px 200px 60px;
+			padding: 		1%;
+		}
+
+			/* Menu Links - color, style, size, position */
+		nav.flexMenu li a,
+		a:visited {
+			color:			white;
+			display:		block;
+			font-size:		1em;
+			font-weight: 		bold;
+			text-align: 		center;
+		}
+
+			/* Menu Hover - background set to pretty pink!  */
+		nav.flexMenu li:hover {
+			background-color: 	rgb(20,200,10);
+		}
+
+			/* Link Hover - text to a more visible black  */
+		nav.flexMenu li a:hover {
+			color: 			black;
+		}
+
+	}
+
+/*	_______________________________________
+		CONTENT STYLES (by page)			
+	=======================================
+	GLOBAL
+	======================*/
+
+	p {
+		padding: 			0 1px 0 1px;
+		text-align: 			justify;
+	}
+
+	h1 {
+		text-decoration: 		underline;
+		display: 			block;
+		font-size: 			2.3em;
+		font-weight: 			bold;
+		margin: 			3% 0 3% 0;
+		color: 				rgb(20,105,20);
+	}
+
+	h2 {
+		display: 			block;
+		font-size: 			1.7em;
+		font-weight: 			bold;
+		margin: 			2% 0 3% 0;
+		color: 				rgb(20,105,20);
+	}
+
+	h3 {
+		display: 			block;
+		font-size: 			1.4em;
+		font-weight: 			bold;
+		margin: 			1% 0 1% 0;
+		color: 				rgb(20,105,20);
+	}
+	
+	h4 {
+		display: 			block;
+		font-size: 			1.1em;
+		font-weight: 			bold;
+		margin: 			1% 0 1% 0;
+		color: 				rgb(20,105,20);
+	}
+
+	hr {
+		margin: 			3%;
+	}
+
+	p.txtBgPeriwinkle {
+		background-color: 		rgb(245,245,255);
+		border: 			1px solid green;
+		padding: 			1.5%;
+		border-radius: 			20px;
+	}
+
+	p.txtBgPink {
+		background-color: 		rgb(255,240,220);
+		border: 			1px solid green;
+		padding: 			1.5%;
+		border-radius: 			20px;
+	}
+
+/*	______________________
+		  Index.html
+	======================
+	Containers
+	==========*/
+
+	div.home {
+		display: 			block;
+		padding: 			4%;
+		border: 			2px solid green;
+
+/* M6LO8 Create a multi-column layout that impacts the rendered page (CSS)
+	The column-count command, below, is applied to the div.home container
+	and forces all the text within the div to display in two even columns
+	since the column count is set to 2. Neat.*/
+
+		column-count: 			2;
+		column-gap: 			5%;
+	}
+
+/*  	======
+	Styles
+	======*/
+
+	img.img-pinky {
+		display: 			inline-block;
+	}
+
+/*	======
+	Tables
+	======*/
+	
+	
+
+/*	______________________
+		  Writing.html
+	======================
+	Containers
+	==========*/
+
+	div.writing {
+		display: 			block;
+		padding: 			2%;
+		border: 			1px solid green;
+	}
+	
+
+/*	======
+	Styles
+	======*/
+
+
+
+/*	======
+	Tables
+	======*/
+
+/* M6LO7 Demonstrate how to format a table with CSS ( CSS, group your table
+	    styles together and note the overall impact they have on the HTML )
+	The table styling rules applied  to the table below,  affect the entire
+	table, the table headers, table rows, and table data cells. The various
+	commands are: text-align left, which sends all text in the table to the
+	left side. Vertical-align middle, centers the text  between the top and
+	bottom borders. padding 1%, pulls the text away from border edges.  The
+	border-collapse collapse command removes the default border gap between
+	cells. Border 2px solid grey, sets a 2 pixel, solid grey border between
+	table cells.*/
+
+	table, th, tr, td {
+		border: 			2px solid grey;
+		border-collapse: 		collapse;
+		text-align: 			left;
+		padding: 			1%;
+		vertical-align: 		middle;
+	}
+	
+	table {
+		margin: 			2% 0 5% 0;
+		width: 				100%;
+	}
+	
+	th {
+		background-color: 		rgb(248,192,97);
+		font-weight: 			bold;
+		padding: 			3px;
+		border: 			2px solid black;
+	}
+	
+	th.tTitle {
+		background-color:		silver;
+		text-align: 			center;
+		border: 			2px solid black;
+	}
+	
+	td {
+		font-family: 			calibri;
+		width: 				auto;
+	}
+
+/*	______________________
+		Stories.html
+	======================
+	Containers
+	==========*/
+	
+	div.alpha {
+		text-align: 			center;
+		width: 				100%;
+	}
+
+/*M5LO5 Demonstrate the use of flexboxes on a web page (CSS)
+	The div.stories flexbox  (below) arranges the  divs that
+	contain solid image blocks, into a centered row down the
+	middle of the page (which will eventually be story links).*/
+
+	div.stories {
+		border: 			1px solid green;
+		display: 			flex;
+		flex-direction: 		column;
+		flex-wrap: 			wrap;
+		justify-content: 		center;
+		align-items: 			center;
+		padding: 			2%;
+	}
+
+/*	======
+	Styles
+	======*/
+
+	img.img-bkmap {
+		width:				90%;
+	}
+
+/*	======
+	Tables
+	======*/
+
+
+
+/*	______________________
+		Inspiration.html
+	======================
+	Containers
+	==========*/
+
+	div.inspire {
+		padding: 			2%;
+		width: 				96%;
+		border: 			1px solid green;
+	}
+
+/*	======
+	Styles
+	======*/
+
+	img.img-inky {
+		display: 			inline-block;
+	}
+
+/*	======
+	Tables
+	======*/
+
+
+
+/*	______________________
+		About.html
+	======================
+	Containers
+	==========*/
+
+	div.about {
+		background-image: 		url(img/img-cal.png);
+		display: 			block;
+		padding: 			2%;
+		border: 			1px solid green;
+	}
+
+	div.about > a, a:visited {
+		color: 				rgb(230,76,85);
+	}
+
+
+/*	======
+	Styles
+	======*/
+
+
+/*	======
+	Tables
+	======*/
+
+
+
+
+/* ________________________________________________________
+
+
+	Palette
+
+	rgb(230,76,85);
+	rgb(248,192,97);
+	
+	
+	periwinkle
+	rgb(245,245,255);
+	
+	bgpink
+	rgb(255,240,220);
+	
+	new green bg
+	rgb(230,250,230);
+
+
+
+
+
+
+
+	THERE ARE MANY ENDINGS, BUT THIS ONE IS MINE.
+
+   ========================================================*/
