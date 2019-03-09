@@ -6,9 +6,9 @@
 
 	/*
 	Name: Anthony Coragliotti
-	Date: 2019 FEB 11
+	Date: 2019 MAR 03
 	Assignment: Project V1 - Basic HTML and CSS
-	Purpose: To showcase my internalization of HTML & CSS modules 5 & 6
+	Purpose: To showcase my internalization of HTML & CSS modules 7, 8 & 9
 	*/
 
 /*	_______________________________________
@@ -29,7 +29,6 @@
 		-Page
 		-Containers
 		-Styles
-		-Tables
 */
 
 /*	_______________________________________
@@ -348,7 +347,7 @@
 		
 	/* STYLES */
 		
-			/* Blend menu with background color(light pink) */
+			/* Blend menu with background color(light green) */
 		nav.flexMenu {
 			background-color: 	rgb(230,250,230);
 		}
@@ -371,7 +370,7 @@
 			text-align: 		center;
 		}
 
-			/* Menu Hover - background set to pretty pink!  */
+			/* Menu Hover - background set to bright green */
 		nav.flexMenu li:hover {
 			background-color: 	rgb(20,200,10);
 		}
@@ -431,27 +430,18 @@
 		margin: 			3%;
 	}
 
-	p.txtBgPeriwinkle {
-		background-color: 		rgb(245,245,255);
-		border: 			1px solid green;
-		padding: 			1.5%;
-		border-radius: 			20px;
-	}
-
-	p.txtBgPink {
-		background-color: 		rgb(255,240,220);
-		border: 			1px solid green;
-		padding: 			1.5%;
-		border-radius: 			20px;
-	}
-
 	p.txtBgYella {
 		background-color: 		rgb(255,255,220);
 		border: 			1px solid green;
 		border-radius: 			20px;
-		display: 			inline-block;
 		padding: 			1.5%;
-		margin: 			0;
+	}
+
+	p.txtBgLiteGreen {
+		background-color: 		rgb(250,255,250);
+		border: 			1px solid green;
+		border-radius: 			20px;
+		padding: 			1.5%;
 	}
 
 /*	______________________
@@ -547,9 +537,7 @@
 		border: 			2px solid green;
 	}
 
-	div.about > a, a:visited {
-		color: 				rgb(230,76,85);
-	}
+
 
 
 /*	======
@@ -563,25 +551,23 @@
 	Palette
 	=======
 
-	
-	rgb(230,76,85);
-
-	
-	rgb(248,192,97);
-	
-	periwinkle
-	rgb(245,245,255);
-	
-	bgpink
-	rgb(255,240,220);
+	footer dark green
+	rgb(5,90,1);
 	
 	new green bg
 	rgb(230,250,230);
+	
+	menu dark green
+	rgb(20,105,20);
+	
+	menu bright green
+	rgb(20,200,10);
+	
+	text yellow
+	rgb(255,255,220);
 
-
-
-
-
+	text lite green
+	rgb(250,255,250);
 
 
 	THERE ARE MANY ENDINGS, BUT THIS ONE IS MINE.
