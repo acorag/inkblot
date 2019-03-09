@@ -79,7 +79,7 @@
 	Containers Global
 	======================*/
 
-	.conPeri {
+	div.conPeri {
 		background-color: 		rgb(230,250,230);
 		border: 			15px solid rgb(5,90,1);
 		border-top:			0;
@@ -90,12 +90,12 @@
 		margin: 			0;
 	}
 
-	.conOuter {
+	div.conOuter {
 		background-color: 		white;
 		margin: 			0 10% 1.5% 10%;
 	}
 
-	.conInner {
+	div.conInner {
 		display: 			block;
 	}
 
@@ -103,18 +103,16 @@
 		BANNER
 	=======================================*/
 	
-	.conBaner {
+	div.conBaner {
 		background-color: 		rgb(230,250,230);
 		width: 				100%;
 	}
 
-	.img-baner {
+	img.img-baner {
 		border-radius: 			100px 30px 100px 30px;
 		height: 			auto;
 		width: 				100%;
 	}
-
-
 
 
 
@@ -158,15 +156,6 @@
 			background-color: 	rgb(20,105,20);
 			border-bottom: 		5px solid black;
 			border-radius: 		100px 30px 100px 30px;
-
-/* M5LO6 Demonstrate use of properties of flexbox items
-	(CSS, document what flexbox item properties you use and their impacts)
-	The selector, nav.flexMenu ul li (directlyl above) contains the flexbox
-	items  (directly below) flex-grow, flex-shrink,  and flex-basis, which
-	all collaborate  to automatically grow  and shrink in unison.  Without
-	all three of  these  properties, the menu list would  not  scale  with 
-	the page  and would appear static, instead  of the existing responsive
-	appearance you see when resizing the browser.*/
 
 			flex-grow: 		1;
 			flex-shrink: 		1;
@@ -292,14 +281,6 @@
 			/* Menu List - position, size */
 		nav.flexMenu ul {
 			display:		flex;
-			
-/*M5LO7 Demonstrate use of properties of flexbox containers
-	(CSS, document what flexbox container properties you use and their impacts)
-	The selector nav.flexMenu ul, (directly above) contains the flexbox container
-	property, (directly below)  flex-direction,  which transforms the navigation
-	menu into a column  when the browser width reduces  to less than 800 pixels.
-	Without the flex-direction: column property,  the menu would be all bunched
-	together when the browser width is reduced to less than 800 pixels.*/
 
 			flex-direction:		column;
 			width: 			70%;
@@ -344,15 +325,6 @@
 
 	/* MECHANICS */
 
-/*M5LO3 Use media queries to format a page differently for phones vs. PCs. 
-	(CSS, note where these are in your CSS and describe the overall impact)
-	The media query below, is used to format pages for viewing screens that
-	are less than 480 pixels wide, which is the maximum width for most cell
-	phones. The impact of this media query can be witnessed by reducing the
-	browser  width to  less than  480 pixels wide. The menu  vanishes and a
-	menu "burger" navigation icon appears.  Hovering over this icon makes a
-	smaller version of the menu appear to be used for page navigation.*/
-
 			/* Media query - devices under 480px */
 	@media screen and (max-width: 480px) {
 
@@ -368,15 +340,6 @@
 		nav.flexMenu ul {
 			display:		none;
 		}
-
-/*M5LO4 Use CSS for pull down menus (CSS)
-	The a#burger:hover+ul command (below) is preceded in the HTML code
-	by an image of a menu  icon.  This  sequential  combination allows
-	for the use of the  CSS symbol "+" and  causes the navigation menu
-	to  not only  appear  when the icon is  hovered over,  but to also
-	remain in place until the  hovering is ended, or a navigation link
-	is clicked. This magical combination simulates a menu being pulled
-	down from an icon image.*/
 
 			/* Hover(burger) - Show menu */
 		a#burger:hover+ul, nav.flexMenu ul:hover {
@@ -432,19 +395,19 @@
 	}
 
 	h1 {
-		text-decoration: 		underline;
 		display: 			block;
 		font-size: 			2.3em;
 		font-weight: 			bold;
-		margin: 			3% 0 3% 0;
-		color: 				rgb(20,105,20);
+		margin: 			0 0 3% 0;
+		color: 				rgb(15,75,30);
+		text-align: 		center;
 	}
 
 	h2 {
 		display: 			block;
 		font-size: 			1.7em;
 		font-weight: 			bold;
-		margin: 			2% 0 3% 0;
+		margin: 			1% 0 1% 0;
 		color: 				rgb(20,105,20);
 	}
 
@@ -482,6 +445,15 @@
 		border-radius: 			20px;
 	}
 
+	p.txtBgYella {
+		background-color: 		rgb(255,255,220);
+		border: 			1px solid green;
+		border-radius: 			20px;
+		display: 			inline-block;
+		padding: 			1.5%;
+		margin: 			0;
+	}
+
 /*	______________________
 		  Index.html
 	======================
@@ -492,29 +464,18 @@
 		display: 			block;
 		padding: 			4%;
 		border: 			2px solid green;
-
-/* M6LO8 Create a multi-column layout that impacts the rendered page (CSS)
-	The column-count command, below, is applied to the div.home container
-	and forces all the text within the div to display in two even columns
-	since the column count is set to 2. Neat.*/
-
-		column-count: 			2;
-		column-gap: 			5%;
 	}
 
 /*  	======
 	Styles
 	======*/
 
-	img.img-pinky {
+	img.img-pat {
 		display: 			inline-block;
+		width: 				15%;
 	}
 
-/*	======
-	Tables
-	======*/
-	
-	
+
 
 /*	______________________
 		  Writing.html
@@ -524,8 +485,8 @@
 
 	div.writing {
 		display: 			block;
-		padding: 			2%;
-		border: 			1px solid green;
+		padding: 			4%;
+		border: 			2px solid green;
 	}
 	
 
@@ -534,52 +495,6 @@
 	======*/
 
 
-
-/*	======
-	Tables
-	======*/
-
-/* M6LO7 Demonstrate how to format a table with CSS ( CSS, group your table
-	    styles together and note the overall impact they have on the HTML )
-	The table styling rules applied  to the table below,  affect the entire
-	table, the table headers, table rows, and table data cells. The various
-	commands are: text-align left, which sends all text in the table to the
-	left side. Vertical-align middle, centers the text  between the top and
-	bottom borders. padding 1%, pulls the text away from border edges.  The
-	border-collapse collapse command removes the default border gap between
-	cells. Border 2px solid grey, sets a 2 pixel, solid grey border between
-	table cells.*/
-
-	table, th, tr, td {
-		border: 			2px solid grey;
-		border-collapse: 		collapse;
-		text-align: 			left;
-		padding: 			1%;
-		vertical-align: 		middle;
-	}
-	
-	table {
-		margin: 			2% 0 5% 0;
-		width: 				100%;
-	}
-	
-	th {
-		background-color: 		rgb(248,192,97);
-		font-weight: 			bold;
-		padding: 			3px;
-		border: 			2px solid black;
-	}
-	
-	th.tTitle {
-		background-color:		silver;
-		text-align: 			center;
-		border: 			2px solid black;
-	}
-	
-	td {
-		font-family: 			calibri;
-		width: 				auto;
-	}
 
 /*	______________________
 		Stories.html
@@ -587,36 +502,14 @@
 	Containers
 	==========*/
 	
-	div.alpha {
-		text-align: 			center;
-		width: 				100%;
-	}
-
-/*M5LO5 Demonstrate the use of flexboxes on a web page (CSS)
-	The div.stories flexbox  (below) arranges the  divs that
-	contain solid image blocks, into a centered row down the
-	middle of the page (which will eventually be story links).*/
-
 	div.stories {
-		border: 			1px solid green;
-		display: 			flex;
-		flex-direction: 		column;
-		flex-wrap: 			wrap;
-		justify-content: 		center;
-		align-items: 			center;
-		padding: 			2%;
+		display: 			block;
+		padding: 			4%;
+		border: 			2px solid green;
 	}
 
 /*	======
 	Styles
-	======*/
-
-	img.img-bkmap {
-		width:				90%;
-	}
-
-/*	======
-	Tables
 	======*/
 
 
@@ -628,9 +521,9 @@
 	==========*/
 
 	div.inspire {
-		padding: 			2%;
-		width: 				96%;
-		border: 			1px solid green;
+		display: 			block;
+		padding: 			4%;
+		border: 			2px solid green;
 	}
 
 /*	======
@@ -639,13 +532,8 @@
 
 	img.img-inky {
 		display: 			inline-block;
+		width: 				15%;
 	}
-
-/*	======
-	Tables
-	======*/
-
-
 
 /*	______________________
 		About.html
@@ -654,10 +542,9 @@
 	==========*/
 
 	div.about {
-		background-image: 		url(img/img-cal.png);
 		display: 			block;
-		padding: 			2%;
-		border: 			1px solid green;
+		padding: 			4%;
+		border: 			2px solid green;
 	}
 
 	div.about > a, a:visited {
@@ -670,21 +557,17 @@
 	======*/
 
 
-/*	======
-	Tables
-	======*/
 
-
-
-
-/* ________________________________________________________
-
+/* ========================================================
 
 	Palette
+	=======
 
-	rgb(230,76,85);
-	rgb(248,192,97);
 	
+	rgb(230,76,85);
+
+	
+	rgb(248,192,97);
 	
 	periwinkle
 	rgb(245,245,255);
