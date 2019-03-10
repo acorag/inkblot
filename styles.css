@@ -561,9 +561,16 @@
 	Styles
 	======*/
 
+	/*
+	M8LO10 Demonstrate a CSS animation or transition.
+		CSS animation is applied to  the  image below.
+	When viewed in the browser, the page loads and the
+	image  performs a  quick 365 degree spin (meant to
+	simulate a victory dance).
+	*/
+
 	img.img-inky {
 		width: 90%;
-		
 		animation-name: spin;
 		animation-duration: .5s;
 		animation-timing-function: linear;
@@ -571,7 +578,7 @@
 
 	iframe {
 		width: 99%;
-		height: 200px;
+		height: 300px;
 	}
 
 	@keyframes spin {
